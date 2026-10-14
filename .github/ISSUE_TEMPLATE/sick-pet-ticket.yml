@@ -1,0 +1,50 @@
+name: Sick pet ticket
+description: My pet (or one of its tools) is sick. Ask other farmers to help diagnose it.
+title: "<pet-program>-v<version>: <what is wrong>"
+labels: ["ticket", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Everything you post here is **public forever**. Paste only the sick tool's code and the error, never your data.
+  - type: input
+    id: pet-program
+    attributes:
+      label: Pet program and version
+      placeholder: pet-program-12-v1.0
+    validations:
+      required: true
+  - type: input
+    id: tool
+    attributes:
+      label: Tool or trick that is sick (its tool box label)
+      placeholder: pet-program-12-v1.0-repo-catcher-v1.0
+  - type: textarea
+    id: symptoms
+    attributes:
+      label: What is wrong
+      description: What you expected, what happened instead, and since when.
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: Error message
+      render: text
+  - type: textarea
+    id: code
+    attributes:
+      label: The sick code (public pets only)
+      description: Private pets (health, finance, memes, privacy tools) leave this empty.
+      render: text
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Before posting
+      options:
+        - label: I ran name-eraser and a secret scan on everything above (no names, emails, personal paths, keys or tokens).
+          required: true
+        - label: Nothing here is from a private pet's data.
+          required: true
+        - label: I read the exact text as my farm's L4 and approve posting it.
+          required: true

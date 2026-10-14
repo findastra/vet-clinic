@@ -1,0 +1,47 @@
+name: Offer a cure
+description: Offer a fix for an open ticket. It will be shown with the unverified-community warning.
+title: "vet-clinic-ticket-<NNNN>-cure-<N>: <what it fixes>"
+labels: ["cure", "unverified"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **Unverified community answer.** Farms never run a cure as it is: it goes into quarantine, a checker agent
+        reviews it, and the farm's own L4 approves it first. Never ask anyone to paste commands or turn off a safety check.
+  - type: input
+    id: ticket
+    attributes:
+      label: Ticket number
+      placeholder: "#12"
+    validations:
+      required: true
+  - type: textarea
+    id: diagnosis
+    attributes:
+      label: Diagnosis
+      description: What you think is wrong, and why.
+    validations:
+      required: true
+  - type: textarea
+    id: cure
+    attributes:
+      label: The cure
+      description: The change, or a link to your pull request against the pet's repo.
+      render: diff
+    validations:
+      required: true
+  - type: textarea
+    id: tested
+    attributes:
+      label: How you tested it
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Rules
+      options:
+        - label: The cure needs no new permissions, keys or network access beyond what the tool already has, or I say exactly which.
+          required: true
+        - label: It contains no secrets and collects no data.
+          required: true

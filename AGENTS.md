@@ -8,7 +8,7 @@ Read its AGENTS.md, PROTECTION-RINGS.md, PET-PROGRAM-FRAMEWORK.md (section 10) a
   agent and that farm's L4.
 - The triage pet labels tickets, checks them for leaked secrets, and tests cures in isolation. It never merges.
 - If a ticket leaks a name, email, key or personal path, hide it and tell the maintainer at once.
-- Security problems (a break-in, a leaked key) are never posted in a public ticket. A private reporting channel
-  opens when the maintainer turns on GitHub private vulnerability reporting.
+- Security problems (a break-in, a leaked key) are never posted publicly. Report them privately:
+  https://github.com/findastra/astras-pet-os/security/advisories/new
 
 Created by Claude Opus 5.5 (`claude-opus-5-5`), 2026-10-14, at Astra's request.

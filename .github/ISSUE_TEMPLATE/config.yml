@@ -1,1 +1,5 @@
 blank_issues_enabled: false
+contact_links:
+  - name: Security problem (a break-in, a leaked key)
+    url: https://github.com/findastra/astras-pet-os/security/advisories/new
+    about: Report it privately. Never post security problems in a public issue.
